@@ -989,3 +989,12 @@ html[dir="rtl"] .lang-menu button {
     gap: 6px;
   }
 }
+
+/* LOGO LINK */
+
+.logo {
+
+  text-decoration: none;
+
+  cursor: pointer;
+}

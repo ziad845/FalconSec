@@ -58,28 +58,29 @@ export default function Header({ lang, setLang }) {
   return (
 
     <header className="header">
+{/* LOGO */}
 
-      {/* LOGO */}
-      <div className="logo">
+<a href="#home" className="logo">
 
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="logo-video"
-        >
-          <source
-            src="/falcon-logo.mp4"
-            type="video/mp4"
-          />
-        </video>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="logo-video"
+  >
+    <source
+      src="/falcon-logo.mp4"
+      type="video/mp4"
+    />
+  </video>
 
-        <h1 className="logo-text">
-          FALCON <span>SEC</span>
-        </h1>
+  <h1 className="logo-text">
+    FALCON <span>SEC</span>
+  </h1>
 
-      </div>
+</a>
+
 
       {/* NAVBAR */}
       <nav>

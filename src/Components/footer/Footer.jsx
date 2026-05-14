@@ -92,17 +92,11 @@ export default function Footer({ lang }) {
               className="footer-logo-img"
             />
 
-<h2 className="footer-brand-title">
+            <h2 className="footer-brand-title">
+              <span className="white">FALCON</span>
 
-  <span className="white">
-    FALCON
-  </span>
-
-  <span className="blue">
-    {" "}  SEC
-  </span>
-
-</h2>
+              <span className="blue"> SEC</span>
+            </h2>
           </div>
 
           <p>{t.description}</p>
@@ -116,19 +110,23 @@ export default function Footer({ lang }) {
               <FaWhatsapp />
             </a>
 
-            <a href="mailto:mahmoud243578@gmail.com">
+            <a href="mailto:falconsec145@gmail.com">
               <FaEnvelope />
             </a>
-            <a href="https://tiktok.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.tiktok.com/@falconsec.eg?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaTiktok />
             </a>
 
-            <a href="https://facebook.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61589932643412" target="_blank" rel="noreferrer">
               <FaFacebookF />
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ziad-khaled-bab395341/"
+              href="https://www.linkedin.com/company/116057461/admin/dashboard/"
               target="_blank"
               rel="noreferrer"
             >
@@ -179,7 +177,7 @@ export default function Footer({ lang }) {
         >
           <h3>{t.contact}</h3>
 
-          <a href="mailto:mahmoud243578@gmail.com">mahmoud243578@gmail.com</a>
+          <a href="mailto:falconsec145@gmail.com">falconsec145@gmail.com</a>
 
           <a href="https://wa.me/201069819706" target="_blank" rel="noreferrer">
             +20 106 981 9706

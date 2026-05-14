@@ -524,7 +524,7 @@ export default function Contact({ lang }) {
           {/* EMAIL CARD */}
 
           <motion.a
-            href="mailto:mahmoud243578@gmail.com"
+            href="mailto:falconsec145@gmail.com"
             className="info-card"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -535,7 +535,7 @@ export default function Contact({ lang }) {
 
             <h3>Email</h3>
 
-            <p>mahmoud243578@gmail.com</p>
+            <p>falconsec145@gmail.com</p>
 
           </motion.a>
 

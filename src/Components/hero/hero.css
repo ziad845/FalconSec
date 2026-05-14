@@ -1,0 +1,630 @@
+:root {
+
+  --blue: rgb(93, 188, 252);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-inline: 1.5rem;
+
+  background: black;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.hero-video {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  filter: brightness(0.5);
+
+  transform: scale(1.08);
+
+  animation:
+    zoomVideo 20s ease-in-out infinite alternate;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+}
+
+/* DARK MODE */
+
+.dark .hero-overlay {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.82) 0%,
+      rgba(0,0,0,0.55) 45%,
+      rgba(0,0,0,0.15) 100%
+    );
+}
+
+/* LIGHT MODE */
+
+.light .hero-overlay {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248,251,255,0.82) 0%,
+      rgba(248,251,255,0.65) 45%,
+      rgba(248,251,255,0.18) 100%
+    );
+
+  backdrop-filter: blur(2px);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.hero-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+
+  width: 100%;
+
+  max-width: 950px;
+
+  padding: 3.5rem;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  transition: 0.35s ease;
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* DARK MODE */
+
+.dark .hero-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5,10,20,0.28),
+      rgba(10,25,40,0.12)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 80px rgba(0,0,0,0.35);
+}
+
+/* LIGHT MODE */
+
+.light .hero-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.58),
+      rgba(255,255,255,0.28)
+    );
+
+  border:
+    1px solid rgba(0,149,246,0.08);
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(16px);
+}
+
+/* GLOW */
+
+.hero-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -30%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(56,189,248,0.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================
+   TOP TEXT
+========================= */
+
+.hero-top-text {
+
+  display: block;
+
+  margin-bottom: 1.4rem;
+
+  color: var(--blue);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.hero-title {
+
+  font-size: 5.4rem;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  color: var(--blue);
+
+  margin-bottom: 2rem;
+}
+
+/* LIGHT MODE TITLE */
+
+.light .hero-title {
+
+  color: #0094ff;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+
+  max-width: 850px;
+
+  color: #d4d4d8;
+
+  font-size: 1.35rem;
+
+  line-height: 1.8;
+}
+
+/* LIGHT MODE */
+
+.light .hero-description {
+
+  color: #1f2937;
+}
+
+.light .hero-top-text {
+
+  color: #0094ff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 2.5rem;
+}
+
+/* BUTTON */
+
+.hero-btn {
+
+  padding: 1rem 2.2rem;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+/* PRIMARY */
+
+.hero-btn.primary {
+
+  background: var(--blue);
+
+  color: white;
+
+  box-shadow:
+    0 10px 30px rgba(93,188,252,0.35);
+}
+
+.hero-btn.primary:hover {
+
+  transform:
+    translateY(-4px);
+
+  background:
+    #79cfff;
+}
+
+/* SECONDARY */
+
+.hero-btn.secondary {
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+}
+
+.hero-btn.secondary:hover {
+
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(255,255,255,0.12);
+}
+
+/* LIGHT MODE BUTTON */
+
+.light .hero-btn.secondary {
+
+  color: #111;
+
+  background:
+    rgba(255,255,255,0.45);
+
+  border:
+    1px solid rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =========================
+   RTL
+========================= */
+
+html[dir="rtl"] .hero-container {
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .hero-card {
+
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-buttons {
+
+  justify-content: flex-start;
+}
+
+/* =========================
+   VIDEO ANIMATION
+========================= */
+
+@keyframes zoomVideo {
+
+  from {
+
+    transform:
+      scale(1.08)
+      translateX(0px);
+  }
+
+  to {
+
+    transform:
+      scale(1.15)
+      translateX(-30px);
+  }
+
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-section {
+
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    2.8rem 2rem;
+
+  overflow: hidden;
+}
+
+/* DARK */
+
+.dark .stats-section {
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,8,23,0.96),
+      rgba(3,17,38,0.98)
+    );
+}
+
+/* LIGHT */
+
+.light .stats-section {
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8fbff,
+      #eef5ff
+    );
+}
+
+/* GRID */
+
+.stats-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1.2rem;
+}
+
+/* CARD */
+
+.stats-item {
+
+  position: relative;
+
+  padding:
+    1.8rem 1rem;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+
+  backdrop-filter: blur(12px);
+}
+
+/* DARK CARD */
+
+.dark .stats-item {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.015)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.25);
+}
+
+/* LIGHT CARD */
+
+.light .stats-item {
+
+  background:
+    rgba(255,255,255,0.5);
+
+  border:
+    1px solid rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* HOVER */
+
+.stats-item:hover {
+
+  transform:
+    translateY(-8px);
+
+  border:
+    1px solid rgba(34,211,238,0.25);
+}
+
+/* NUMBER */
+
+.stats-item h2 {
+
+  font-size: 2.8rem;
+
+  font-weight: 800;
+
+  margin-bottom: 0.8rem;
+
+  color: #22d3ee;
+
+  text-shadow:
+    0 0 18px rgba(34,211,238,0.45);
+}
+
+/* TEXT */
+
+.stats-item p {
+
+  color: #d4d4d8;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  line-height: 1.9;
+}
+
+/* LIGHT MODE TEXT */
+
+.light .stats-item p {
+
+  color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .stats-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    min-height: 100vh;
+
+    padding:
+      7rem 1rem 2rem;
+
+    align-items: flex-start;
+  }
+
+  .hero-card {
+
+    padding: 2rem 1.5rem;
+
+    border-radius: 24px;
+  }
+
+  .hero-title {
+
+    font-size: 3rem;
+
+    line-height: 1.1;
+  }
+
+  .hero-description {
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-btn {
+
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .stats-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  html[dir="rtl"] .hero-card {
+
+    text-align: right;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hero-title {
+
+    font-size: 2.4rem;
+  }
+
+}

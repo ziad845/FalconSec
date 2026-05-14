@@ -1,0 +1,991 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 999;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  height: 60px;
+
+  overflow: hidden;
+}
+
+.logo-video {
+  width: 65px;
+
+  height: 65px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  mix-blend-mode: lighten;
+
+  transition: 0.3s;
+}
+
+.logo-text {
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  color: white;
+
+  letter-spacing: 1px;
+
+  margin: 0;
+
+  line-height: 1;
+}
+
+.logo-text span {
+  color: #38bdf8;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header nav {
+  justify-self: center;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50px;
+
+  padding: 0.7rem 1.7rem;
+}
+
+.header ul.flex {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.header ul li a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #d4d4d8;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.header ul li a:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.right-actions {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.action-btn {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light .header {
+  background: rgba(255, 255, 255, 0.85);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.light .header nav {
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light .header ul li a {
+  color: #333;
+}
+
+.light .logo-text {
+  color: #111;
+}
+
+.light .action-btn {
+  color: #222;
+}
+
+/* FIX LOGO IN LIGHT MODE */
+
+.light .logo-video {
+  background: rgba(0, 0, 0, 0.06);
+
+  padding: 4px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  mix-blend-mode: normal;
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.lang-box {
+  position: relative;
+}
+
+/* MENU */
+
+.lang-menu {
+  position: absolute;
+
+  top: 55px;
+
+  right: 0;
+
+  min-width: 170px;
+
+  padding: 0.45rem;
+
+  border-radius: 18px;
+
+  background: rgba(15, 23, 42, 0.97);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+
+  z-index: 99999;
+
+  overflow: hidden;
+}
+
+/* RTL */
+
+html[dir="rtl"] .lang-menu {
+  right: 0;
+
+  left: auto;
+}
+
+/* BUTTONS */
+
+.lang-menu button {
+  width: 100%;
+
+  border: none;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  padding: 0.95rem 1rem;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+/* RTL TEXT */
+
+html[dir="rtl"] .lang-menu button {
+  text-align: right;
+}
+
+/* HOVER */
+
+.lang-menu button:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #38bdf8;
+}
+
+/* ACTIVE */
+
+.lang-menu button.active {
+  background: rgba(56, 189, 248, 0.08);
+
+  color: #38bdf8;
+}
+
+/* LIGHT MODE */
+
+.light .lang-menu {
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light .lang-menu button {
+  color: #222;
+}
+
+.light .lang-menu button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .lang-menu {
+    top: 60px;
+
+    right: 0;
+
+    min-width: 160px;
+  }
+
+  html[dir="rtl"] .lang-menu {
+    right: 0;
+
+    left: auto;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 1rem 1.2rem;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .logo {
+    gap: 8px;
+  }
+
+  .logo-video {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.6);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 99999;
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+/* MENU PANEL */
+
+.mobile-menu {
+
+  width: 280px;
+
+  height: 100vh;
+
+  background:
+    rgba(2,6,23,0.98);
+
+  border-left:
+    1px solid rgba(255,255,255,0.08);
+
+  padding:
+    2rem 1.5rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+
+  animation:
+    slideMenu 0.35s ease;
+}
+
+/* CLOSE BUTTON */
+
+.close-menu {
+
+  align-self: flex-end;
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 1.6rem;
+
+  cursor: pointer;
+
+  margin-bottom: 1rem;
+}
+
+/* LINKS */
+
+.mobile-menu a {
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 1.1rem;
+
+  padding:
+    1rem;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+
+.mobile-menu a:hover {
+
+  background:
+    rgba(56,189,248,0.12);
+
+  color: #38bdf8;
+
+  transform:
+    translateX(5px);
+}
+
+/* LIGHT MODE */
+
+.light .mobile-menu {
+
+  background:
+    rgba(255,255,255,0.98);
+
+  border-left:
+    1px solid rgba(0,0,0,0.08);
+}
+
+.light .mobile-menu a {
+
+  color: #0f172a;
+
+  background:
+    rgba(0,0,0,0.04);
+}
+
+.light .close-menu {
+
+  color: #0f172a;
+}
+
+/* ANIMATION */
+
+@keyframes slideMenu {
+
+  from {
+
+    transform:
+      translateX(100%);
+  }
+
+  to {
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+/* =========================
+   MOBILE MENU OVERLAY
+========================= */
+
+.mobile-menu-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.75);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  z-index: 99999;
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+/* =========================
+   MENU PANEL
+========================= */
+
+.mobile-menu {
+
+  width: 300px;
+
+  height: 100vh;
+
+  padding: 1.6rem;
+
+  background:
+    rgba(15,23,42,0.78);
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  border-left:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    -10px 0 40px rgba(0,0,0,0.35);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+  animation:
+    menuSlide 0.35s ease;
+}
+
+/* CYBER GLOW */
+
+.mobile-menu::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+
+  right: -100px;
+
+  width: 260px;
+
+  height: 260px;
+
+  background:
+    rgba(56,189,248,0.16);
+
+  filter: blur(90px);
+
+  border-radius: 50%;
+}
+
+/* =========================
+   MENU TOP
+========================= */
+
+.mobile-menu-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* TITLE */
+
+.mobile-menu-top h3 {
+
+  color: white;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-menu {
+
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color: white;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.close-menu:hover {
+
+  transform:
+    rotate(90deg);
+
+  color: #38bdf8;
+}
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.mobile-menu-links {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.4rem;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* SINGLE LINK */
+
+.mobile-link {
+
+  position: relative;
+
+  text-decoration: none;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  padding:
+    1rem 0.2rem;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+
+  transition: 0.3s;
+
+  opacity: 0;
+
+  animation:
+    fadeLink 0.4s ease forwards;
+}
+
+/* ACTIVE LINE */
+
+.mobile-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+
+  left: 0;
+
+  width: 0;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #2563eb
+    );
+
+  transition: 0.35s;
+}
+
+/* HOVER */
+
+.mobile-link:hover {
+
+  color: #38bdf8;
+
+  padding-left: 8px;
+}
+
+.mobile-link:hover::after {
+
+  width: 100%;
+}
+
+/* =========================
+   SOCIALS
+========================= */
+
+.mobile-socials {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* SOCIAL ICON */
+
+.mobile-socials a {
+
+  width: 44px;
+
+  height: 44px;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 1rem;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition: 0.3s;
+}
+
+/* SOCIAL HOVER */
+
+.mobile-socials a:hover {
+
+  transform:
+    translateY(-5px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #2563eb
+    );
+
+  box-shadow:
+    0 0 25px rgba(14,165,233,0.35);
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light .mobile-menu {
+
+  background:
+    rgba(255,255,255,0.78);
+
+  border-left:
+    1px solid rgba(0,0,0,0.08);
+}
+
+.light .mobile-menu-top h3 {
+
+  color: #0f172a;
+}
+
+.light .mobile-link {
+
+  color: #475569;
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.06);
+}
+
+.light .close-menu {
+
+  color: #0f172a;
+
+  background:
+    rgba(0,0,0,0.05);
+}
+
+.light .mobile-socials a {
+
+  background:
+    rgba(255,255,255,0.85);
+
+  color: #0f172a;
+
+  border:
+    1px solid rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes menuSlide {
+
+  from {
+
+    transform:
+      translateX(100%);
+  }
+
+  to {
+
+    transform:
+      translateX(0);
+  }
+}
+
+@keyframes fadeLink {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateX(30px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+
+/* =========================
+   FOOTER BRAND TITLE
+========================= */
+
+.footer-brand-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 3rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   FALCON
+========================= */
+
+.footer-brand-title .white {
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.12);
+}
+
+/* =========================
+   SEC
+========================= */
+
+.footer-brand-title .blue {
+
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 18px rgba(56,189,248,0.45);
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light .footer-brand-title .white {
+
+  color: #0f172a;
+
+  text-shadow: none;
+}
+
+.light .footer-brand-title .blue {
+
+  color: #0ea5e9;
+
+  text-shadow:
+    0 0 10px rgba(14,165,233,0.18);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer-brand-title {
+
+    font-size: 2.2rem;
+
+    gap: 6px;
+  }
+}

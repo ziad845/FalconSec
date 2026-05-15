@@ -121,12 +121,16 @@ export default function Footer({ lang }) {
               <FaTiktok />
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61589932643412" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/profile.php?id=61589932643412"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaFacebookF />
             </a>
 
             <a
-              href="https://www.linkedin.com/company/116057461/admin/dashboard/"
+              href="https://www.linkedin.com/company/falconsec-eg/"
               target="_blank"
               rel="noreferrer"
             >
